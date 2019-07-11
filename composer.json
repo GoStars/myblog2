@@ -1,0 +1,22 @@
+{
+  "name": "Myblog2",
+  "description": "Website and blog",
+  "keywords": ["Blog"],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "GoStars",
+      "email": "gostars@meta.ua",
+      "role": "Creator / Main Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "filp/whoops": "~2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Myblog2\\": "app/"
+    }
+  }
+}
