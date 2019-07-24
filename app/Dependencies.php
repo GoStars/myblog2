@@ -14,4 +14,13 @@
     $injector->alias('Http\Response', 'Http\HttpResponse');
     $injector->share('Http\HttpResponse');
 
+    $injector->alias('Myblog2\Template\Renderer', 'Myblog2\Template\MustacheRenderer');
+    $injector->define('Mustache_Engine', [
+        ':options' => [
+            'loader' => new Mustache_Loader_FilesystemLoader(dirname(__DIR__) . '/view/templates', [
+                'extension' => '.html'
+            ])
+        ]
+    ]);
+
     return $injector;
