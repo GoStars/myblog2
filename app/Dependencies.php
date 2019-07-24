@@ -23,4 +23,10 @@
         ]
     ]);
 
+    $injector->alias('Myblog2\Page\PageReader', 'Myblog2\Page\FilePageReader');
+    $injector->share('Myblog2\Page\FilePageReader');
+    $injector->define('Myblog2\Page\FilePageReader', [
+        ':pageFolder' => __DIR__ . '/../pages'
+    ]);
+
     return $injector;
